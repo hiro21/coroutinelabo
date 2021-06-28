@@ -10,19 +10,15 @@ fun main() = runBlocking {
 }
 
 private suspend fun methodA() = coroutineScope {
-    async {
-        println("beforeA")
-        delay(1000)
-        println("afterA")
-        "result A"
-    }
+    println("beforeA")
+    delay(1000)
+    println("afterA")
+    "result A"
 }
 
 private suspend fun methodB() = coroutineScope {
-    async{
-        println("beforeB")
-        delay(3000)
-        println("afterB")
-        "result B"
-    }
+    println("beforeB")
+    delay(3000)
+    println("afterB")
+    "result B"
 }
